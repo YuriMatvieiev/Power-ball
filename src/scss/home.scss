@@ -1,0 +1,472 @@
+//====================================================================================================
+.main {
+  background: linear-gradient(179.92deg, #F22C4D 0.07%, #0D1D33 178.62%);
+  position: relative;
+
+  // .main__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+@include adaptiveValue("height", 527, 410, 1100, 767.98, 1);
+@media (max-width:$mobile){
+   flex-direction: column; 
+   height: 100%;
+}
+  }
+  // .main__text-block
+  &__text-block {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: rem(40);
+@include adaptiveValue("margin-top", 40, 20, 1100, 767.98, 1);
+
+  }
+  // .main__logo
+  &__logo {
+   img{
+    @include adaptiveValue("width", 173, 118);
+    @include adaptiveValue("height", 173, 118);
+   }
+  }
+  // .main__title
+  &__title {
+    font-family: 'Commissioner';
+    font-weight: 700;
+    @include adaptiveValue("margin-top", -10, -15, 1100, 767.98, 1);
+    @include adaptiveValue("font-size", 30, 24);
+    @include adaptiveValue("line-height", 37, 29);
+    color: #FFFFFF;
+    margin-bottom: rem(10);
+    span{
+      @include adaptiveValue("font-size", 90, 60);
+      @include adaptiveValue("line-height", 110, 73);
+    }
+  }
+  // .main__button
+  &__button {
+    background: #fff;
+@media (any-hover: hover){
+  &:hover{
+    transition: all 0.3s ease 0s;
+    background: #ffecec;
+  }
+}
+  }
+  // .main__sub-text
+  &__sub-text {
+    margin-top: rem(17);
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Commissioner';
+  }
+  // .main__img-block
+  &__img-block {
+    position: relative;
+    margin-top: rem(10);
+    @media (max-width:$mobile){
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+    }
+  }
+  // .main__main-img
+  &__main-img {
+  }
+  &__people-img{
+    position: absolute;
+    z-index: 1;
+    right: -45px;
+    @include adaptiveValue("right", -45, 0, 1100, 767.98, 1);
+    @include adaptiveValue("width", 567, 297);
+    @media (max-width:$mobile){
+       position: relative; 
+    }
+  }
+  &__dollar-top{
+    position: absolute;
+    top: -10px;
+    right: -50px;
+    @media (max-width:$mobile){
+       display: none; 
+    }
+  }
+  &__dollar-top-mobile{
+    display: none;
+    position: absolute;
+    top: -5px;
+    @include adaptiveValue("right", 130, 0, 767.97, 375, 1);
+    @media (max-width:$mobile){
+       display: block;
+    }
+  }
+  &__dollar-mid{
+    position: absolute;
+    position: absolute;
+    top: 30%;
+    @include adaptiveValue("right", 400, 340, 1100, 767.98, 1);
+    @media (max-width:$mobile){
+      @include adaptiveValue("right", 400, 160, 767.97, 375, 1);
+       top: 6%; 
+    }
+  }
+  &__bottom-line{
+    position: absolute;
+    bottom: -20px;
+    z-index: 3;
+    width: 100%;
+    @include adaptiveValue("height", 126, 81);
+    path{
+      @media (max-width:$tablet){
+        fill: #fff;
+      }
+    }
+  }
+}
+
+
+//====================================================================================================
+
+.steps {
+  margin-top: rem(20);
+  background: #F9F9F9;
+  @include adaptiveValue("padding-bottom", 60, 26);
+  @media (max-width:$tablet){
+    background: #fff;
+  }
+  // .steps__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  // .steps__title
+  &__title {
+    font-family: 'Commissioner';
+    font-weight: 700;
+    @include adaptiveValue("font-size", 36, 20);
+    @include adaptiveValue("line-height", 48, 32);
+    @include adaptiveValue("margin-bottom", 70, 40);
+  }
+  // .steps__block
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include adaptiveValue("gap", 14, 36);
+    @include adaptiveValue("margin-bottom", 50, 27);
+  }
+  // .steps__item
+  &__item {
+    position: relative;
+    background: #FFFFFF;
+border: 1px solid #FFFFFF;
+box-shadow: 2px 3px 3px rgba(113, 113, 113, 0.17);
+border-radius: 20px;
+padding: 37px 37px 37px 40px;
+width: rem(260);
+  }
+  // .steps__number
+  &__number {
+    position: absolute;
+    top: -18px;
+    left: 19px;
+    font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+font-family: 'Commissioner';
+color: #F22C4D;
+background: #F9F9F9;
+border: 4px solid #FFFFFF;
+border-radius: 50%;
+width: rem(44);
+height: rem(44);
+text-align: center;
+  }
+  // .steps__text
+  &__text {
+    font-size: 16px;
+line-height: 22px;
+  }
+  // .steps__button
+  &__button {
+    background: #F22C4D;
+    color: #FFFFFF;
+    @media (any-hover: hover){
+      &:hover{
+    background-color: #af3356;
+        transition: all 0.3s ease 0s;
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.about {
+  background: #0D1D33;
+  @include adaptiveValue("padding-top", 74, 31);
+  @include adaptiveValue("padding-bottom", 74, 31);
+  // .about__container
+  &__container {
+    display: flex;
+flex-wrap: wrap;
+@include adaptiveValue("gap", 47, 35);
+@media (max-width:$mobile){
+  justify-content: center; 
+}
+  }
+  // .about__item
+  &__item {
+    display: flex;
+    @include adaptiveValue("gap", 207, 45, 1100, 767.98, 1);
+    align-items: center;
+    &:nth-child(even){
+      flex-direction: row-reverse;
+    }
+    @media (max-width:$mobile){
+        @include adaptiveValue("gap", 45, 26);
+        flex-direction: column;
+        &:nth-child(even){
+          flex-direction: column;
+        }
+    }
+  }
+  // .about__img
+  &__img {
+    @include adaptiveValue("max-width", 440, 343);
+    border-radius: 30px;
+  }
+  // .about__text
+  &__text {
+    color: #FFFFFF;
+    @media (max-width:$mobile){
+      @include adaptiveValue("width", 393, 343, 767, 375, 1); 
+    }
+  }
+  // .about__title
+  &__title {
+    font-family: 'Commissioner';
+    font-weight: 700;
+    font-size: rem(28);
+    line-height: math.div(40 , 28);
+    margin-bottom: rem(25);
+  }
+  // .about__border
+  &__border {
+    @include adaptiveValue("width", 126, 94);
+    height: rem(3);
+    background: #F22C4D;
+    display: block;
+    margin-bottom: rem(11);
+  }
+  // .about__desc
+  &__desc {
+    font-family: 'Noto Sans';
+    font-size: rem(18);
+    line-height: math.div(24 , 18);
+  }
+}
+//========================================================================================================================================================
+
+.winner {
+  background: #F9F9F9;
+  @include adaptiveValue("padding-top", 73, 32);
+  @include adaptiveValue("padding-bottom", 42, 30);
+  // .winner__container
+  &__container {
+  }
+  // .winner__title
+  &__title {
+    font-family: 'Commissioner';
+    font-weight: 700;
+    @include adaptiveValue("font-size", 36, 20);
+    @include adaptiveValue("line-height", 48, 32);
+    text-align: center;
+  }
+  // .winner__block
+  &__block {
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    @include adaptiveValue("margin-bottom", 40, 20);
+    background-color: #fff;
+    gap: 25px;
+  }
+  // .winner__background
+  &__background {
+  }
+  &__line-top{
+    position: absolute;
+      top: -70px;
+      width: 100%;
+      left: 50%;
+      z-index: 1;
+      transform: translate(-50%, 0);
+      @media (max-width:1180px){
+        width: auto;
+      }
+  }
+  &__line-bottom{
+    position: absolute;
+      bottom: -70px;
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%, 0) rotate(180deg);
+      
+      @media (max-width:1180px){
+        width: auto;
+      }
+  }
+  // .winner__item
+  &__item {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 180, 30, 1100, 767.98, 1);
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+    &:nth-child(even){
+      flex-direction: row-reverse;
+    }
+    @media (max-width:$mobile){
+        flex-direction: column-reverse;
+        &:nth-child(even){
+          flex-direction: column-reverse;
+
+        }
+    }
+  }
+  // .winner__text-block
+  &__text-block {
+  }
+  // .winner__slag
+  &__slag {
+    font-size: rem(28);
+    line-height: math.div(40 , 28);
+    font-family: 'Commissioner';
+    font-weight: 700;
+    margin-bottom: rem(25);
+    @media (max-width:$mobileSmall){
+        width: 88%;
+    }
+  }
+  // .winner__border
+  &__border {
+    background: #F22C4D;
+    display: block;
+    @include adaptiveValue("width", 127, 99);
+    height: 3px;
+  }
+  // .winner__desc
+  &__desc {
+    @include adaptiveValue("margin-top", 10, 20);
+    font-size: rem(20);
+    line-height: math.div(32 , 20);
+  }
+  // .winner__img-block
+  &__img-block {
+    position: relative;
+    z-index: 2;
+  }
+  // .winner__img
+  &__img {
+    @include adaptiveValue("max-width", 440, 340);
+  }
+  // .winner__dott-first
+  &__dott-first {
+    background: #F22C4D;
+    width: 61px;
+height: 61px;
+display: block;
+border-radius: 50%;
+position: absolute;
+top: 0;
+@include adaptiveValue("right", -96, 20, 1700, 767.98, 1);
+z-index: 3;
+@media (max-width:$mobile){
+   display: none; 
+}
+  }
+  // .winner__dott-second-top
+  &__dott-second-top {
+    background: #F22C4D;
+    width: 31px;
+height: 31px;
+display: block;
+border-radius: 50%;
+position: absolute;
+top: 45px;
+@include adaptiveValue("left", -61, 20, 1700, 767.98, 1);
+z-index: 3;
+@media (max-width:$mobile){
+  left: unset;
+   right: 20px; 
+   top: 5px;
+   width: 24px;
+   height: 24px;
+}
+  }
+  // .winner__dott-second-bottom
+  &__dott-second-bottom {
+    background: #F22C4D;
+    width: 26px;
+height: 26px;
+display: block;
+border-radius: 50%;
+position: absolute;
+bottom: -10px;
+right: 100px;
+z-index: 3;
+@media (max-width:$mobile){
+   display: none; 
+}
+  }
+  // .winner__dott-third
+  &__dott-third {
+    background: #F22C4D;
+    width: 36px;
+height: 36px;
+display: block;
+border-radius: 50%;
+position: absolute;
+bottom: -42px;
+@include adaptiveValue("right", -42, 20, 1700, 767.98, 1);
+z-index: 3;
+@media (max-width:$mobile){
+   right: unset;
+   bottom: unset;
+   left: 20px;
+   top: 20px;
+   width: 16px;
+height: 16px;
+}
+  }
+  &__title-bottom{
+    font-family: 'Commissioner';
+    font-weight: 700;
+    @include adaptiveValue("font-size", 36, 28);
+    @include adaptiveValue("line-height", 48, 40);
+    text-align: center;
+    @include adaptiveValue("margin-bottom", 33, 27);
+  }
+  // .winner__button
+  &__button {
+background: #F22C4D;
+color: #FFFFFF;
+@media (any-hover: hover){
+      &:hover{
+    background-color: #af3356;
+        transition: all 0.3s ease 0s;
+      }
+    }
+  }
+}
+.winner-bottom__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

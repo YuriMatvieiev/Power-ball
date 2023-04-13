@@ -1,0 +1,94 @@
+//====================================================================================================
+.footer {
+  background: #0D1D33;
+  padding-top: rem(34);
+padding-bottom: rem(55);
+color: #fff;
+  // .footer__container
+  &__container {
+  }
+  // .footer__top-block
+  &__top-block {
+    display: flex;
+    @include adaptiveValue("gap", 33, 20);
+    margin-bottom: rem(40);
+    @media (max-width:$tablet){
+       flex-wrap: wrap; 
+    }
+  }
+  // .footer__top-item
+  &__top-item {
+    font-size: rem(16);
+    line-height: math.div(22 , 16);
+@media (max-width:$tablet){
+  width: 48%;
+}
+@media (max-width:$mobile){
+   width: 100%; 
+}
+  }
+  // .footer__top-title
+  &__top-title {
+    font-weight: 600;
+  }
+  // .footer__top-desc
+  &__top-desc {
+  }
+  // .footer__middle-block
+  &__middle-block {
+    padding: 10px 0px;
+    border-top: 1px solid #D2D2D2;
+    border-bottom: 1px solid #D2D2D2;
+display: flex;
+@include adaptiveValue("gap", 30, 5);
+justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  // .footer__bottom-block
+  &__bottom-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  // .footer__bottom-logo
+  &__bottom-logo {
+    margin-top: rem(25);
+    @include adaptiveValue("margin-bottom", 10, 15);
+  }
+  // .footer__bottom-text
+  &__bottom-text {
+    font-size: rem(16);
+    line-height: math.div(22 , 16);
+    margin-bottom: rem(20);
+  }
+  // .footer__bottom-link
+  &__bottom-link {
+    font-size: rem(16);
+    line-height: math.div(22 , 16);
+    align-self: flex-start;
+    text-decoration: underline !important;
+    @media (any-hover: hover){
+      &:hover{
+        color: #d48f8f;
+        transition: all 0.3s ease 0s;
+      }
+    }
+  }
+  &__bottom-copy{
+    margin-top: rem(20);
+    display: none;
+    text-align: center;
+font-size: rem(16);
+line-height: math.div(22 , 16);
+font-weight: 600;
+color: #5A5F66;
+    @media (max-width:$mobile){
+       display: block;
+       
+    }
+  }
+}
+
+//====================================================================================================
