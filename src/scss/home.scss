@@ -49,7 +49,7 @@ margin-top: rem(40);
 @media (any-hover: hover){
   &:hover{
     transition: all 0.3s ease 0s;
-    background: #ffecec;
+    background: #EAEAEA;
   }
 }
   }
@@ -88,6 +88,7 @@ margin-top: rem(40);
     position: absolute;
     top: -10px;
     right: -50px;
+    width: rem(328);
     @media (max-width:$mobile){
        display: none; 
     }
@@ -96,6 +97,7 @@ margin-top: rem(40);
     display: none;
     position: absolute;
     top: -5px;
+    width: rem(70);
     @include adaptiveValue("right", 130, 0, 767.97, 375, 1);
     @media (max-width:$mobile){
        display: block;
@@ -106,9 +108,46 @@ margin-top: rem(40);
     position: absolute;
     top: 30%;
     @include adaptiveValue("right", 400, 340, 1100, 767.98, 1);
+    width: rem(166);
     @media (max-width:$mobile){
       @include adaptiveValue("right", 400, 160, 767.97, 375, 1);
        top: 6%; 
+    }
+  }
+  &__ball-3{
+    @include adaptiveValue("width", 179, 20);
+    position: absolute;
+    @include adaptiveValue("bottom", -20, 10, 1100, 767.98, 1);
+    @include adaptiveValue("right", 365, 325, 1100, 767.98, 1);
+    @media (max-width:$mobile){
+      transform: rotate(15.77deg);
+       bottom: unset;
+       @include adaptiveValue("right", 40, 5, 767.97, 375, 1); 
+    top: 70px;
+    }
+  }
+  &__ball-4{
+    @include adaptiveValue("width", 46, 51);
+    position: absolute;
+    @include adaptiveValue("top", 40, 20, 1100, 767.98, 1);
+    @include adaptiveValue("left", 40, -90, 1100, 767.98, 1);
+    @media (max-width:$mobile){
+      @include adaptiveValue("right", 120, -10, 767.97, 375, 1);
+      @include adaptiveValue("bottom", 80, 50, 767.97, 375, 1);
+       left: unset;
+       top: unset;
+       transform: rotate(122.37deg);
+    }
+  }
+  &__ball-8{
+    @include adaptiveValue("width", 155, 117);
+    width: 155px;
+    position: absolute;
+    bottom: 60px;
+    @include adaptiveValue("left", 0, -80, 1100, 767.98, 1);
+    @media (max-width:$mobile){
+        @include adaptiveValue("left", 135, 0, 767.97, 375, 1);
+        @include adaptiveValue("bottom", 0, -5, 767.97, 375, 1);
     }
   }
   &__bottom-line{
@@ -196,7 +235,7 @@ line-height: 22px;
     color: #FFFFFF;
     @media (any-hover: hover){
       &:hover{
-    background-color: #af3356;
+    background-color: #F33F5C;
         transition: all 0.3s ease 0s;
       }
     }
@@ -458,7 +497,7 @@ background: #F22C4D;
 color: #FFFFFF;
 @media (any-hover: hover){
       &:hover{
-    background-color: #af3356;
+    background-color: #F33F5C;
         transition: all 0.3s ease 0s;
       }
     }
